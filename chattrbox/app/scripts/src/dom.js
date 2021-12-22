@@ -41,6 +41,9 @@ export class ChatList {
     var $messageRow = $('<li>', {
       class: 'message-row'
     });
+    if (this.username === messageData.user) {
+      $messageRow.addClass('me'); 
+    } 
     var $message = $('<p>');
     $message.append($('<span>', {
       class: 'message-username',
